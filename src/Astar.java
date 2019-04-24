@@ -2,6 +2,6 @@
 public class Astar {
 	
 	//search algorithm
-	//Git should pick this up.
+	//Git should pick this up
 
 }
