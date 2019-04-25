@@ -14,6 +14,7 @@ public class World {
 		
 	}
 	
+	//a simple randomizer to place walls within the room
 	public Tile[][] createWalls(int r, int c){
 		Tile room[][] = new Tile[r][c];
 		rand = new Random();
