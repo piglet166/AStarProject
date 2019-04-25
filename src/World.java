@@ -16,7 +16,7 @@ public class World {
 	
 	//a simple randomizer to place walls within the room
 	public Tile[][] createWalls(int r, int c){
-		Tile room[][] = new Tile[r][c];
+		Tile map[][] = new Tile[r][c];
 		rand = new Random();
 		int chance;
 		
@@ -24,14 +24,14 @@ public class World {
 			for(int j = 0; j < c; j++) {
 				chance = rand.nextInt(10);
 				if(chance < 8) {
-					room[i][j] = new Tile("floor");
+					map[i][j] = new Tile("floor");
 				}else {
-					room[i][j] = new Tile("wall");
+					map[i][j] = new Tile("wall");
 				}
 			}
 		}
 		
-		return room;
+		return map;
 	}
 
 	public Tile[][] getTiles() {
