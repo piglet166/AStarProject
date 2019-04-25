@@ -1,7 +1,11 @@
 
 public class Adventurer {
 	
-	String movementArray[];
+	String movementArray[] = {"Up", "Down", "Left", "Right"};
+	
+	public Adventurer() {
+		
+	}
 
 	public String[] getMovementArray() {
 		return movementArray;
