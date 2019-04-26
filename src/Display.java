@@ -58,6 +58,8 @@ public class Display{
 		switchWindow.setSize(300, 100);
 		switchWindow.setLocationRelativeTo(mapWindow);
 		switchWindow.setVisible(true);
+		
+		MouseInput mi = new MouseInput(true);
 	}
 
 }
