@@ -24,9 +24,9 @@ public class World {
 			for(int j = 0; j < c; j++) {
 				chance = rand.nextInt(10);
 				if(chance < 9) {
-					map[i][j] = new Tile("floor");
+					map[i][j] = new Tile("floor", i, j);
 				}else {
-					map[i][j] = new Tile("wall");
+					map[i][j] = new Tile("wall", i, j);
 				}
 			}
 		}

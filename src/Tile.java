@@ -4,15 +4,26 @@ public class Tile {
 	
 	boolean wall;//means the AI can't walk through this tile
 	String floor;//establishes what image the display will contain
+	int x, y;
 	
-	Tile(String f){
+	Tile(String f, int r, int c){
 		
 		floor = f;
+		x = r;
+		y = c;
 		
 		if(f == "wall") {
 			wall = true;
 		}
 		
+	}
+
+	public int getX() {
+		return x;
+	}
+
+	public int getY() {
+		return y;
 	}
 
 	public void setFloor(String floor) {

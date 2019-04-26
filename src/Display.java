@@ -39,7 +39,7 @@ public class Display{
 		b1 = new JRadioButton("Adventurer");
 		b1.setBounds(10, 10, 60, 30);
 		switchWindow.add(b1);
-		b2 = new JRadioButton("Goal");
+		b2 = new JRadioButton("Goal", true);
 		b2.setBounds(10, 10, 60, 30);
 		switchWindow.add(b2);
 		bg = new ButtonGroup();

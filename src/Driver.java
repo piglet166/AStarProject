@@ -6,9 +6,6 @@ public class Driver {
 		World room = new World();
 		Display window = new Display(room);
 		
-		
-		
-		
 		//console display for testing purposes
 
 		Tile[][] map = room.getTiles();
