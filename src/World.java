@@ -23,7 +23,7 @@ public class World {
 		for(int i = 0; i < r; i++) {
 			for(int j = 0; j < c; j++) {
 				chance = rand.nextInt(10);
-				if(chance < 8) {
+				if(chance < 9) {
 					map[i][j] = new Tile("floor");
 				}else {
 					map[i][j] = new Tile("wall");

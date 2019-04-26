@@ -3,7 +3,7 @@ import javax.swing.*;
 
 public class Display{
 	
-	private static JFrame window;
+	private static JFrame mapWindow, switchWindow;
 	JRadioButton b1, b2;
 	ButtonGroup bg;
 	
@@ -14,42 +14,50 @@ public class Display{
 	private void createWindow(World w) {
 		World room = w;
 		Tile[][] map = room.getTiles();
-		window = new JFrame();
+		mapWindow = new JFrame();
+		switchWindow = new JFrame();
 		
-		window.setLayout(new GridLayout(15, 15));
+		mapWindow.setLayout(new GridLayout(15, 15));
+		switchWindow.setLayout(new GridLayout());
 		
-		//user selects between goal and start
-		b1 = new JRadioButton("Adventurer");
-		b1.setBounds(10, 10, 60, 30);
-		window.add(b1);
-		b2 = new JRadioButton("Goal");
-		b2.setBounds(10, 10, 60, 30);
-		window.add(b2);
-		bg = new ButtonGroup();
-		bg.add(b1);
-		bg.add(b2);
-		
-		
-		
-		//set up tiles
+				//set up tiles
 		for(int i = 0; i < map.length; i++) {
 			for(int j = 0; j < map[i].length; j++) {
 				if(map[i][j].isWall()) {
 					ImageIcon image = new ImageIcon(getClass().getResource("wall.png"));
 					JLabel label = new JLabel(image);
-					window.add(label);
+					mapWindow.add(label);
 				}else {
 					ImageIcon image = new ImageIcon(getClass().getResource("floor.png"));
 					JLabel label = new JLabel(image);
-					window.add(label);
+					mapWindow.add(label);
 				}
 			}
 		}
-		window.setTitle("A* Map");
-		window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		window.setLocationRelativeTo(null);
-		window.setSize(480, 540);
-		window.setVisible(true);
+		
+		//user selects between goal and start
+		b1 = new JRadioButton("Adventurer");
+		b1.setBounds(10, 10, 60, 30);
+		switchWindow.add(b1);
+		b2 = new JRadioButton("Goal");
+		b2.setBounds(10, 10, 60, 30);
+		switchWindow.add(b2);
+		bg = new ButtonGroup();
+		bg.add(b1);
+		bg.add(b2);
+		
+		
+		mapWindow.setTitle("A* Map");
+		mapWindow.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		mapWindow.setSize(480, 480);
+		mapWindow.setLocationRelativeTo(null);
+		mapWindow.setVisible(true);
+		
+		switchWindow.setTitle("Mouse Select");
+		switchWindow.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		switchWindow.setSize(300, 100);
+		switchWindow.setLocationRelativeTo(mapWindow);
+		switchWindow.setVisible(true);
 	}
 
 }
