@@ -1,12 +1,14 @@
+import java.awt.Point;
+import java.awt.event.MouseEvent;
 
 public class Driver {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		World room = new World();
-		Display window = new Display(room);
-		
-		
+		AIuser user = new AIuser();
+		Display window = new Display(room, user);
+		MouseEvent e = null;
 		
 		//console display for testing purposes
 		Tile[][] map = room.getTiles();
@@ -15,6 +17,14 @@ public class Driver {
 				System.out.print("["+map[i][j].getFloor()+"] ");
 			}
 			System.out.println();
+		}
+		while(true) {
+			if(user.isTileSelect() == true) {
+				System.out.println("Working");
+				user.setTileSelect(false);
+				
+				
+			}
 		}
 	}
 }
