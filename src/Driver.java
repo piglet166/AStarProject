@@ -18,11 +18,11 @@ public class Driver {
 			}
 			System.out.println();
 		}
-		while(true) {
-			if(user.tileSelect) {
-				System.out.println("working");
-				user.setTileSelect(false);
-			}
-		}
+//		while(true) {
+//			if(user.tileSelect) {
+//				System.out.println("working");
+//				user.setTileSelect(false);
+//			}
+//		}
 	}
 }
