@@ -6,7 +6,7 @@ public class Driver {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		World room = new World();
-		AIuser user = new AIuser();
+		AIuser user = new AIuser(room);
 		Display window = new Display(room, user);
 		MouseEvent e = null;
 		
@@ -19,11 +19,9 @@ public class Driver {
 			System.out.println();
 		}
 		while(true) {
-			if(user.isTileSelect() == true) {
-				System.out.println("Working");
+			if(user.tileSelect) {
+				System.out.println("working");
 				user.setTileSelect(false);
-				
-				
 			}
 		}
 	}

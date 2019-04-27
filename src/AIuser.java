@@ -8,13 +8,20 @@ public class AIuser implements ItemListener, MouseListener{
 	String movementArray[] = {"Up", "Down", "Left", "Right"};
 	String choiceArray[] = {"A", "G"};
 	boolean tileSelect;
+	World room;
+	Tile[][] map;
 	
-	public AIuser() {
+	public AIuser(World w) {
 		
+		room = w;
 		tileSelect = false;
 		
 	}
 	
+	public World getRoom() {
+		return room;
+	}
+
 	public boolean isTileSelect() {
 		return tileSelect;
 	}
@@ -40,8 +47,8 @@ public class AIuser implements ItemListener, MouseListener{
 	@Override
 	public void mouseClicked(MouseEvent e) {
 		// TODO Auto-generated method stub
+		tileSelect = true;
 		System.out.println("clicked");
-		this.setTileSelect(true);
 	}
 
 	@Override

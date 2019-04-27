@@ -7,10 +7,8 @@ public class Display{
 	private static JFrame mapWindow, switchWindow;
 	JRadioButton b1, b2;
 	ButtonGroup bg;
-	AIuser user;
 	
 	public Display(World w, AIuser a) {
-		user = a;
 		createWindows(w, a);
 	}
 	
@@ -66,7 +64,7 @@ public class Display{
 		switchWindow.setVisible(true);
 	}
 	
-	public void placeIcon(AIuser ai) {
+	public void selectIcon(AIuser ai) {
 		boolean ab = b1.isSelected();
 		boolean gb = b2.isSelected();
 		ImageIcon icon;
